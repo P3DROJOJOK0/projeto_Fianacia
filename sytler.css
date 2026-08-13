@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+.app-header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.app-header p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #f1f5f9;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  background: #22c55e;
+  color: #052e16;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+.summary p {
+  padding: 0.35rem 0;
+  font-size: 0.95rem;
+}
+
+.summary .positivo strong {
+  color: #4ade80;
+}
+
+.summary .negativo strong {
+  color: #f87171;
+}
+
+.transaction-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.transaction-item {
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  background: #0f172a;
+  border-left: 4px solid #64748b;
+  font-size: 0.9rem;
+}
+
+.transaction-item.receita {
+  border-left-color: #22c55e;
+}
+
+.transaction-item.despesa {
+  border-left-color: #ef4444;
+}

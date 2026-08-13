@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle Financeiro</title>
+  <link rel="stylesheet" href="./sytler.css" />
+</head>
+<body>
+
+  <header class="app-header">
+    <h1>💰 Controle Financeiro</h1>
+    <p>Gestão de receitas e despesas em tempo real com Firebase</p>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Nova Transação</h2>
+      <form id="transaction-form">
+        <div class="form-group">
+          <label for="nome">Descrição</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex: Salário, Aluguel..." required />
+        </div>
+
+        <div class="form-group">
+          <label for="valor">Valor (R$)</label>
+          <input type="number" id="valor" name="valor" step="0.01" min="0" placeholder="0,00" required />
+        </div>
+
+        <div class="form-group">
+          <label for="tipo">Tipo</label>
+          <select id="tipo" name="tipo">
+            <option value="receita">Receita</option>
+            <option value="despesa">Despesa</option>
+          </select>
+        </div>
+
+        <button type="submit">Salvar Transação</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Resumo</h2>
+      <div id="summary" class="summary">
+        <p>Carregando dados...</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Transações</h2>
+      <ul id="transaction-list" class="transaction-list"></ul>
+    </section>
+
+  </main>
+
+  <!-- Módulo principal da aplicação (ESM: import/export) -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
